@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Para Nana ❤️</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px;
+      }
+
+      h1 {
+        color: #e91e63;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+
+      .message {
+        font-size: 1.2em;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .heart {
+        font-size: 60px;
+        color: #e91e63;
+        animation: pulse 1.5s infinite;
+      }
+
+      .button {
+        background: #e91e63;
+        color: white;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: transform 0.3s;
+        margin: 10px;
+      }
+
+      .button:hover {
+        transform: scale(1.05);
+      }
+
+      .hidden-message {
+        display: none;
+        margin-top: 20px;
+        font-style: italic;
+        color: #666;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .photos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin: 20px 0;
+      }
+
+      .photo {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #audioPlayer {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <audio id="audioPlayer" controls>
+    <source
+      src="musica.mp3"
+      type="audio/mpeg"
+    />
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+  <body>
+    <div class="container">
+      <div class="heart">❤️</div>
+      <h1></h1>
+
+      <div class="message">
+        <p>Meu Bem,</p>
+        <p>
+          Talvez as coisas podem parecer difíceis agora, mas quero que saiba que
+          <strong>vai ficar tudo bem</strong>. Eu estou aqui para te apoiar.
+        </p>
+        <p>
+          Não importa o que aconteça, você nunca está sozinha. Estarei ao seu
+          lado <strong>sempre</strong>.
+        </p>
+        <p>Te amo mais que todas as estrelas do céu ✨</p>
+      </div>
+
+      <button class="button" onclick="playMusic()">
+        Clica aqui pra tocar uma musiquinha pra te alegrar! 🎵
+      </button>
+
+      <h3>Motivos pelos quais eu te amo:</h3>
+      <ul id="loveReasons">
+        <li>Seu sorriso ilumina meu dia ☀️</li>
+        <li>Sua força me inspira 💪</li>
+        <li>Você me faz melhor 🌱</li>
+      </ul>
+    </div>
+
+    <script>
+      function playMusic() {
+        const audioPlayer = document.getElementById("audioPlayer");
+        console.log("Tentando tocar música...");
+        audioPlayer.play();
+      }
+    </script>
+  </body>
+</html>
